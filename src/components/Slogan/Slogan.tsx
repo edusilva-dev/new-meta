@@ -1,13 +1,17 @@
-import IPort from 'interfaces/port'
 import React, { FC } from 'react'
+
+// Styled Components
 import { SloganContainer, SloganText, Title } from './styles'
+
+// Interfaces
+import IPort from 'interfaces/port'
 
 const Slogan: FC<IPort> = ({ port }) => {
   return (
-    <SloganContainer>
-      <Title>Meta Segurança</Title>
+    <SloganContainer port={port}>
+      <Title port={port}>Meta Segurança</Title>
 
-      <SloganText>A nossa meta é a sua segurança</SloganText>
+      <SloganText port={port}>A nossa meta é a sua segurança</SloganText>
     </SloganContainer>
   )
 }

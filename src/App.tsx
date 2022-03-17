@@ -1,6 +1,4 @@
-import Toast from 'components/Toast/Toast'
 import React, { FC, useState, useEffect } from 'react'
-import getPort from 'utils/getPort'
 
 // Components
 import CardList from './components/CardList/CardList'
@@ -9,6 +7,10 @@ import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import Main from './components/Main/Main'
 import Slogan from './components/Slogan/Slogan'
+import Toast from 'components/Toast/Toast'
+
+// Utils
+import getPort from 'utils/getPort'
 
 const App: FC = () => {
   const [scrollPosition, setScrollPosition] = useState<number>(0)

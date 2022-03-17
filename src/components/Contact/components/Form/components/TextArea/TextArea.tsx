@@ -1,4 +1,6 @@
 import { FC } from 'react'
+
+// Styled Components
 import { StyledTextArea } from './styles'
 
 interface ITextAreaProps {

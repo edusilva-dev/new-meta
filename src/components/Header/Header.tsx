@@ -1,8 +1,12 @@
 import React, { FC } from 'react'
 
+// Images
 import logoImage from 'assets/images/logo.png'
 
+// Styled Components
 import { HeaderContainer, Logo, LogoImage, MenuItem, MenuList } from './styles'
+
+// Enums && Interfaces
 import IPort from 'interfaces/port'
 import Ports from 'enums/ports'
 

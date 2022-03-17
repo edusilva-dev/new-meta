@@ -1,16 +1,27 @@
 import styled from 'styled-components'
+
+// Animations
 import { FadeIn } from 'styles/animations'
+
+// Colors
 import colors from 'styles/colors'
 
-interface ICardContainerProps {
+// Enums && Interfaces
+import Ports from 'enums/ports'
+import IPort from 'interfaces/port'
+
+interface ICardContainerProps extends IPort {
   index: number
 }
 
 export const CardContainer = styled.div<ICardContainerProps>`
   width: 270px;
-  height: 270px;
+  height: ${props => (props.port !== Ports.SMALL_SIZE ? '270px' : '200px')};
 
   padding: 25px;
+  margin-top: 40px;
+  margin-left: 25px;
+  margin-right: 25px;
 
   display: flex;
   align-items: center;
@@ -29,10 +40,6 @@ export const CardContainer = styled.div<ICardContainerProps>`
   animation: ${FadeIn} 1.2s ${props => props.index * 0.5}s ease forwards;
 
   transition: all 0.2s ease;
-
-  &:not(:first-child) {
-    margin-left: 50px;
-  }
 
   &:hover {
     box-shadow: none;

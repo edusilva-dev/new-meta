@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+// Images
 import logoImage from 'assets/images/logo.png'
 
 export const MainContainer = styled.main`

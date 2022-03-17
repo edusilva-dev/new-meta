@@ -1,4 +1,6 @@
 import React, { FC } from 'react'
+
+// Styled Components
 import { FooterContainer, Text } from './styles'
 
 const Footer: FC = () => {

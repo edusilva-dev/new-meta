@@ -1,21 +1,31 @@
 import styled from 'styled-components'
+
+// Animations
 import { FadeIn } from 'styles/animations'
+
+// Colors
 import colors from 'styles/colors'
 
-export const SloganContainer = styled.div`
+// Enums && Interfaces
+import Ports from 'enums/ports'
+import IPort from 'interfaces/port'
+
+export const SloganContainer = styled.div<IPort>`
   width: 100%;
 
-  margin-top: 60px;
-  padding-top: 40px;
-  padding-bottom: 60px;
+  ${props =>
+    props.port === Ports.SMALL_SIZE &&
+    `
+    padding: 0 15px;
+  `}
 
   display: flex;
   flex-direction: column;
   align-items: center;
 `
 
-export const Title = styled.h1`
-  font-size: 56px;
+export const Title = styled.h1<IPort>`
+  font-size: ${props => (props.port === Ports.SMALL_SIZE ? '42px' : '56px')};
   font-weight: 600;
   text-align: center;
   color: ${colors.lightBlue};
@@ -26,8 +36,8 @@ export const Title = styled.h1`
   animation: ${FadeIn} 1.5s ease forwards;
 `
 
-export const SloganText = styled.h2`
-  font-size: 56px;
+export const SloganText = styled.h2<IPort>`
+  font-size: ${props => (props.port === Ports.SMALL_SIZE ? '38px' : '56px')};
   font-weight: 400;
   text-align: center;
 

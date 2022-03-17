@@ -1,4 +1,6 @@
 import React, { FC, useEffect, useRef } from 'react'
+
+// Styled Components
 import { MainContainer } from './styles'
 
 interface IMainProps {

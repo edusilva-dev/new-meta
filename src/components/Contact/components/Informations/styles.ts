@@ -1,11 +1,19 @@
 import styled from 'styled-components'
+
+// Animations
 import { PullRight } from 'styles/animations'
+
+// Colors
 import colors from 'styles/colors'
 
-export const InformationsContainer = styled.div`
-  width: 50%;
+// Enums && Interfaces
+import Ports from 'enums/ports'
+import IPort from 'interfaces/port'
 
-  padding: 20px 35px;
+export const InformationsContainer = styled.div<IPort>`
+  width: ${props => (props.port === Ports.SMALL_SIZE ? '100%' : '50%')};
+
+  padding: ${props => (props.port === Ports.SMALL_SIZE ? '20px 25px' : '20px 35px')};
 
   display: flex;
   flex-direction: column;

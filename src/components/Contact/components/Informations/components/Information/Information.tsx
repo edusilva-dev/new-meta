@@ -1,26 +1,32 @@
 import React, { FC } from 'react'
 
+// SVGs
 import { ReactComponent as Phone } from 'assets/icons/phone.svg'
 import { ReactComponent as Email } from 'assets/icons/email.svg'
+
+// Styled Components
 import { Text, TextContainer } from './styles'
 
-interface IInformationProps {
+// Interfaces
+import IPort from 'interfaces/port'
+
+interface IInformationProps extends IPort {
   phone: string
   email: string
   name: string
 }
 
-const Information: FC<IInformationProps> = ({ phone, email, name }) => {
+const Information: FC<IInformationProps> = ({ phone, email, name, port }) => {
   return (
     <TextContainer>
-      <Text>{name}</Text>
+      <Text port={port}>{name}</Text>
 
-      <Text>
+      <Text port={port}>
         <Email />
         {email}
       </Text>
 
-      <Text>
+      <Text port={port}>
         <Phone />
         {phone}
       </Text>

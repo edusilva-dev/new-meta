@@ -1,5 +1,11 @@
 import styled from 'styled-components'
+
+// Colors
 import colors from 'styles/colors'
+
+// Enums && Interfaces
+import Ports from 'enums/ports'
+import IPort from 'interfaces/port'
 
 export const TextContainer = styled.div`
   display: flex;
@@ -15,9 +21,11 @@ export const TextContainer = styled.div`
   }
 `
 
-export const Text = styled.span`
+export const Text = styled.span<IPort>`
+  ${props => props.port === Ports.SMALL_SIZE && 'width: 100%;'}
+
   color: ${colors.white};
-  font-size: 16px;
+  font-size: ${props => (props.port === Ports.SMALL_SIZE ? '9px' : '16px')};
 
   display: flex;
   align-items: center;
@@ -27,7 +35,12 @@ export const Text = styled.span`
   }
 
   &:first-child {
-    font-size: 18px;
+    font-size: ${props => (props.port === Ports.SMALL_SIZE ? '14px' : '18px')};
     font-weight: 500;
+  }
+
+  & svg {
+    width: 15px;
+    height: 15px;
   }
 `

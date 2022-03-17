@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+
+// Colors
 import colors from 'styles/colors'
 
 export const StyledButton = styled.button`

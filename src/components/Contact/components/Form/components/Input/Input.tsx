@@ -1,4 +1,6 @@
 import { FC } from 'react'
+
+// Styled Components
 import { StyledInput } from './styles'
 
 interface IInputProps {

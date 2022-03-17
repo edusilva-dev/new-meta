@@ -1,6 +1,9 @@
 import React, { FC, useEffect } from 'react'
 
+// SVGs
 import { ReactComponent as Check } from 'assets/icons/check.svg'
+
+// Styled Components
 import { ToastContainer } from './styles'
 
 interface IToastProps {

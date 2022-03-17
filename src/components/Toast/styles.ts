@@ -1,5 +1,9 @@
 import styled from 'styled-components'
+
+// Animations
 import { PullRight } from 'styles/animations'
+
+// Colors
 import colors from 'styles/colors'
 
 export const ToastContainer = styled.div`
