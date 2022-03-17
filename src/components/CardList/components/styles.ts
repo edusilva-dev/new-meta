@@ -6,17 +6,13 @@ import { FadeIn } from 'styles/animations'
 // Colors
 import colors from 'styles/colors'
 
-// Enums && Interfaces
-import Ports from 'enums/ports'
-import IPort from 'interfaces/port'
-
-interface ICardContainerProps extends IPort {
+interface ICardContainerProps {
   index: number
 }
 
 export const CardContainer = styled.div<ICardContainerProps>`
-  width: 270px;
-  height: ${props => (props.port !== Ports.SMALL_SIZE ? '270px' : '200px')};
+  width: calc((100% / 4) - 55px);
+  height: 270px;
 
   padding: 25px;
   margin-top: 40px;
@@ -45,6 +41,15 @@ export const CardContainer = styled.div<ICardContainerProps>`
     box-shadow: none;
 
     border-color: ${colors.lightBlue};
+  }
+
+  @media screen and (max-width: 1024px) and (min-width: 540px) {
+    width: calc((100% / 2) - 55px);
+  }
+
+  @media screen and (max-width: 539px) {
+    width: 100%;
+    height: 200px;
   }
 `
 

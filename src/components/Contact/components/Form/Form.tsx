@@ -8,15 +8,12 @@ import TextArea from './components/TextArea/TextArea'
 // Styled Components
 import { FormContainer, Title } from './styles'
 
-// Interfaces
-import IPort from 'interfaces/port'
-
-interface IFormProps extends IPort {
+interface IFormProps {
   className: string
   setSubmitAnswer: (message: string) => void
 }
 
-const Form: FC<IFormProps> = ({ className, setSubmitAnswer, port }) => {
+const Form: FC<IFormProps> = ({ className, setSubmitAnswer }) => {
   const [name, setName] = useState<string>('')
   const [email, setEmail] = useState<string>('')
   const [message, setMessage] = useState<string>('')
@@ -43,7 +40,7 @@ const Form: FC<IFormProps> = ({ className, setSubmitAnswer, port }) => {
   }
 
   return (
-    <FormContainer className={className} onSubmit={e => handleSubmit(e)} port={port}>
+    <FormContainer className={className} onSubmit={e => handleSubmit(e)}>
       <Title>Ou envie-nos sua mensagem</Title>
 
       <Input

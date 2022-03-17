@@ -28,4 +28,8 @@ export const StyledButton = styled.button`
     opacity: 1;
     background-color: ${colors.blue};
   }
+
+  &:focus {
+    border: 2px solid ${colors.black};
+  }
 `

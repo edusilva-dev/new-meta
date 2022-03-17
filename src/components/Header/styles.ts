@@ -19,10 +19,18 @@ export const HeaderContainer = styled.header`
   box-shadow: 0 0 20px 2px ${colors.lightGray};
 
   z-index: 10;
+
+  @media screen and (max-width: 539px) {
+    padding: 0 15px;
+  }
 `
 
 export const Logo = styled.h2`
   font-weight: 500;
+
+  @media screen and (max-width: 539px) {
+    display: none;
+  }
 `
 
 export const LogoImage = styled.img`
@@ -38,13 +46,27 @@ export const MenuList = styled.nav`
 export const MenuItem = styled.a`
   color: ${colors.black};
 
-  transition: opacity 0.2s ease;
+  border-bottom: 2px solid transparent;
+
+  outline: none;
+
+  transition: all 0.2s ease;
 
   &:hover {
     opacity: 0.5;
   }
 
+  &:focus {
+    border-color: ${colors.black};
+  }
+
   &:not(:first-child) {
     margin-left: 15px;
+  }
+
+  @media screen and (max-width: 539px) {
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
   }
 `

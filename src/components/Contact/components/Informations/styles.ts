@@ -6,14 +6,10 @@ import { PullRight } from 'styles/animations'
 // Colors
 import colors from 'styles/colors'
 
-// Enums && Interfaces
-import Ports from 'enums/ports'
-import IPort from 'interfaces/port'
+export const InformationsContainer = styled.div`
+  width: 50%;
 
-export const InformationsContainer = styled.div<IPort>`
-  width: ${props => (props.port === Ports.SMALL_SIZE ? '100%' : '50%')};
-
-  padding: ${props => (props.port === Ports.SMALL_SIZE ? '20px 25px' : '20px 35px')};
+  padding: 20px 35px;
 
   display: flex;
   flex-direction: column;
@@ -24,6 +20,14 @@ export const InformationsContainer = styled.div<IPort>`
 
   &.animate {
     animation: ${PullRight(1000)} 1s ease forwards;
+  }
+
+  @media screen and (max-width: 1010px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 539px) {
+    padding: 20px 25px;
   }
 `
 

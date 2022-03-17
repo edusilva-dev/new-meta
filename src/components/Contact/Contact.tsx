@@ -7,24 +7,17 @@ import Informations from './components/Informations/Informations'
 // Styled Components
 import { ContactContainer } from './styles'
 
-// Interfaces
-import IPort from 'interfaces/port'
-
-interface IContactProps extends IPort {
+interface IContactProps {
   scrollPosition: number
   setSubmitAnswer: (message: string) => void
 }
 
-const Contact: FC<IContactProps> = ({ scrollPosition, setSubmitAnswer, port }) => {
+const Contact: FC<IContactProps> = ({ scrollPosition, setSubmitAnswer }) => {
   return (
-    <ContactContainer id="contact" port={port}>
-      <Informations className={scrollPosition > 223 ? 'animate' : ''} port={port} />
+    <ContactContainer id="contact">
+      <Informations className={scrollPosition > 629 ? 'animate' : ''} />
 
-      <Form
-        className={scrollPosition > 223 ? 'animate' : ''}
-        setSubmitAnswer={setSubmitAnswer}
-        port={port}
-      />
+      <Form className={scrollPosition > 629 ? 'animate' : ''} setSubmitAnswer={setSubmitAnswer} />
     </ContactContainer>
   )
 }

@@ -24,7 +24,7 @@ export const MainContainer = styled.main`
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    opacity: 0.1;
+    opacity: 0.05;
 
     z-index: -1;
   }

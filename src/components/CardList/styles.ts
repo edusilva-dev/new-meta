@@ -1,17 +1,16 @@
 import styled from 'styled-components'
 
-// Enums && Interfaces
-import Ports from 'enums/ports'
-import IPort from 'interfaces/port'
-
-export const CardsContainer = styled.div<IPort>`
+export const CardsContainer = styled.div`
   width: 100%;
 
-  margin-top: ${props => (props.port === Ports.SMALL_SIZE ? '20px' : '80px')};
-  padding: ${props => (props.port === Ports.SMALL_SIZE ? '0' : '0 30px')};
+  margin-top: 80px;
 
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+
+  @media screen and (max-width: 539px) {
+    margin-top: 20px;
+  }
 `

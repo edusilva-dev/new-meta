@@ -9,14 +9,11 @@ import { CardsContainer } from './styles'
 // Utils
 import cards from 'utils/cards'
 
-// Interfaces
-import IPort from 'interfaces/port'
-
-const CardList: FC<IPort> = ({ port }) => {
+const CardList: FC = () => {
   return (
-    <CardsContainer id="services" port={port}>
+    <CardsContainer id="services">
       {cards.map((card, index) => (
-        <Card key={index} index={index} port={port} {...card} />
+        <Card key={index} index={index} {...card} />
       ))}
     </CardsContainer>
   )

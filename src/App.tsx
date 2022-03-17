@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from 'react'
+import React, { FC, useState } from 'react'
 
 // Components
 import CardList from './components/CardList/CardList'
@@ -8,35 +8,26 @@ import Header from './components/Header/Header'
 import Main from './components/Main/Main'
 import Slogan from './components/Slogan/Slogan'
 import Toast from 'components/Toast/Toast'
-
-// Utils
-import getPort from 'utils/getPort'
+import About from 'components/About/About'
 
 const App: FC = () => {
   const [scrollPosition, setScrollPosition] = useState<number>(0)
   const [submitAnswer, setSubmitAnswer] = useState<string>('')
-  const [port, setPort] = useState<string>(getPort())
-
-  useEffect(() => {
-    const handleResize = () => {
-      setPort(getPort())
-    }
-
-    window.addEventListener('resize', handleResize)
-  }, [])
 
   return (
     <>
-      <Header port={port} />
+      <Header />
 
       <Main setScrollPosition={setScrollPosition}>
         {submitAnswer && <Toast message={submitAnswer} setSubmitAnswer={setSubmitAnswer} />}
 
-        <Slogan port={port} />
+        <Slogan />
 
-        <CardList port={port} />
+        <About />
 
-        <Contact port={port} scrollPosition={scrollPosition} setSubmitAnswer={setSubmitAnswer} />
+        <CardList />
+
+        <Contact scrollPosition={scrollPosition} setSubmitAnswer={setSubmitAnswer} />
 
         <Footer />
       </Main>

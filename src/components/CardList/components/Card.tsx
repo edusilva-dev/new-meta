@@ -9,17 +9,14 @@ import { ReactComponent as Clean } from 'assets/icons/clean.svg'
 import { ReactComponent as Party } from 'assets/icons/party.svg'
 import { ReactComponent as Event } from 'assets/icons/event.svg'
 
-// Interfaces
-import IPort from 'interfaces/port'
-
-interface ICardProps extends IPort {
+interface ICardProps {
   index: number
   title: string
   description: string
   icon: string
 }
 
-const Card: FC<ICardProps> = ({ index, title, description, icon, port }) => {
+const Card: FC<ICardProps> = ({ index, title, description, icon }) => {
   const renderIcon = () => {
     if (icon === 'gate') return <Gate />
     if (icon === 'clean') return <Clean />
@@ -28,7 +25,7 @@ const Card: FC<ICardProps> = ({ index, title, description, icon, port }) => {
   }
 
   return (
-    <CardContainer index={index} port={port}>
+    <CardContainer index={index}>
       <Title>
         {renderIcon()}
         {title}
