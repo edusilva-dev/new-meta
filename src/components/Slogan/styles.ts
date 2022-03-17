@@ -16,7 +16,7 @@ export const SloganContainer = styled.div<IPort>`
   ${props =>
     props.port === Ports.SMALL_SIZE &&
     `
-    padding: 0 15px;
+    padding: 0 25px;
   `}
 
   display: flex;
