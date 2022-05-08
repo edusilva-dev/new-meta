@@ -3,7 +3,7 @@ import { FadeIn } from 'styles/animations'
 import colors from 'styles/colors'
 
 export const AboutContainer = styled.div`
-  width: 85%;
+  width: 65%;
 
   margin: 100px auto 0 auto;
   padding: 35px;

@@ -8,7 +8,9 @@ const Slogan: FC = () => {
     <SloganContainer>
       <Title>Meta Segurança</Title>
 
-      <SloganText>A nossa meta é a sua segurança</SloganText>
+      <SloganText>
+        A nossa <mark>meta</mark> é a sua segurança
+      </SloganText>
     </SloganContainer>
   )
 }

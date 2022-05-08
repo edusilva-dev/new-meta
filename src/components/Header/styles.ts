@@ -19,23 +19,18 @@ export const HeaderContainer = styled.header`
   box-shadow: 0 0 20px 2px ${colors.lightGray};
 
   z-index: 10;
+  position: relative;
 
   @media screen and (max-width: 539px) {
     padding: 0 15px;
   }
 `
 
-export const Logo = styled.h2`
-  font-weight: 500;
-
-  @media screen and (max-width: 539px) {
-    display: none;
-  }
-`
-
 export const LogoImage = styled.img`
   height: 75%;
   object-fit: contain;
+
+  transition: all 2s ease;
 `
 
 export const MenuList = styled.nav`

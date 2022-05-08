@@ -42,7 +42,7 @@ export const Text = styled.span`
     width: 100%;
 
     &:not(:first-child) {
-      font-size: 9px;
+      font-size: 10px;
     }
   }
 `

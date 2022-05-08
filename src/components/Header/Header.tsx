@@ -1,17 +1,22 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 
 // Images
 import logoImage from 'assets/images/logo.png'
 
 // Styled Components
-import { HeaderContainer, Logo, LogoImage, MenuItem, MenuList } from './styles'
+import { HeaderContainer, LogoImage, MenuItem, MenuList } from './styles'
 
 const Header: FC = () => {
+  const windowHeight: number = window.innerHeight
+  const [scrollPosition, setScrollPosition] = useState<number>(0)
+
   return (
     <HeaderContainer>
-      <Logo>Meta Segurança</Logo>
-
-      <LogoImage src={logoImage} alt="Logo da Meta Segurança" />
+      <LogoImage
+        src={logoImage}
+        alt="Logo da Meta Segurança"
+        className={scrollPosition > windowHeight ? 'grow' : ''}
+      />
 
       <MenuList>
         <MenuItem href="#about">Sobre</MenuItem>

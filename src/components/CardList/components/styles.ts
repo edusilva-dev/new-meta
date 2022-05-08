@@ -69,9 +69,42 @@ export const Title = styled.h2`
 `
 
 export const Description = styled.p`
+  width: 100%;
+
   color: ${colors.darkGray};
   font-size: 16px;
   text-align: center;
 
   margin-top: 15px;
+
+  & > ul {
+    width: 100%;
+
+    list-style-type: none;
+  }
+
+  & > ul > li {
+    text-align: left;
+
+    margin-left: 15px;
+
+    position: relative;
+  }
+
+  & > ul > li::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -15px;
+
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+
+    background-color: ${colors.darkGray};
+  }
+
+  & > ul > li:not(:first-child) {
+    margin-top: 10px;
+  }
 `

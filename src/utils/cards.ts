@@ -1,22 +1,47 @@
 const cards = [
   {
     title: 'Portaria',
-    description: 'Monitoramento, controle e segurança conforme sua necessidade.',
+    description: `
+      <ul>
+        <li>Controle de entrada e saída de pessoas e veículos</li>
+        <li>Organização ao acesso de pessoas ao local</li>
+        <li>Orentação aos visitantes</li>
+      </ul>
+    `,
     icon: 'gate'
   },
   {
     title: 'Limpeza',
-    description: 'Profissionais qualificados para deixar seu ambiente mais limpo',
+    description: `
+      <ul>
+        <li>Limpeza predial diária</li>
+        <li>Limpeza predial por escala</li>
+        <li>Limpea domiciliar ocasional</li>
+      </ul>
+    `,
     icon: 'clean'
   },
   {
     title: 'Festas',
-    description: 'Sua festa mais segura: Revista e controle de fluxo',
+    description: `
+      <ul>
+        <li>Controle de entrada e saída de pessoas</li>
+        <li>Controle de conflitos</li>
+        <li>Revista (masculino e feminino)</li>
+      </ul>
+    `,
     icon: 'party'
   },
   {
     title: 'Eventos',
-    description: 'Para um evento com uma boa qualidade, nada melhor que uma boa segurança!',
+    description: `
+      <ul>
+        <li>Monitoramento de pessoas</li>
+        <li>Controle de conflitor</li>
+        <li>Segurança reforçada</li>
+        <li>Segurança pessoal para atração principal</li>
+      </ul>
+    `,
     icon: 'event'
   }
 ]

@@ -5,10 +5,13 @@ const colors = {
   gray: '#ebebeb',
   darkGray: '#888',
 
+  lightBlack: '#2E2E2E',
   black: '#000',
 
-  blue: '#0D53AD',
+  lightestBlue: '#51BCF6',
   lightBlue: '#018FD7',
+  blue: '#0D53AD',
+  darkBlue: '#053652',
 
   green: 'green'
 }

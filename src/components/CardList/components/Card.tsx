@@ -31,7 +31,7 @@ const Card: FC<ICardProps> = ({ index, title, description, icon }) => {
         {title}
       </Title>
 
-      <Description>{description}</Description>
+      <Description dangerouslySetInnerHTML={{ __html: description }}></Description>
     </CardContainer>
   )
 }
