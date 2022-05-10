@@ -11,6 +11,6 @@ export const CardsContainer = styled.div`
   flex-wrap: wrap;
 
   @media screen and (max-width: 539px) {
-    margin-top: 20px;
+    margin-top: 0px;
   }
 `

@@ -49,7 +49,9 @@ export const CardContainer = styled.div<ICardContainerProps>`
 
   @media screen and (max-width: 539px) {
     width: 100%;
-    height: 200px;
+    height: fit-content;
+
+    margin-top: 30px;
   }
 `
 

@@ -21,22 +21,22 @@ const Form: FC<IFormProps> = ({ className, setSubmitAnswer }) => {
   const handleSubmit = async (e: any) => {
     e.preventDefault()
 
-    const data = {
-      name,
-      email,
-      message
-    }
+    // const data = {
+    //   name,
+    //   email,
+    //   message
+    // }
 
-    const response = await fetch('http://localhost:3040/', {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
-    const answer = await response.json()
-    setSubmitAnswer(answer.message)
+    // const response = await fetch('http://localhost:3040/', {
+    //   method: 'POST',
+    //   headers: {
+    //     Accept: 'application/json',
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify(data)
+    // })
+    // const answer = await response.json()
+    setSubmitAnswer('Mensagem enviada com sucesso!')
   }
 
   return (

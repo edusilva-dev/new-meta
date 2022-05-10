@@ -8,7 +8,7 @@ import colors from 'styles/colors'
 
 export const ToastContainer = styled.div`
   width: 300px;
-  height: 50px;
+  height: fit-content;
 
   display: flex;
   align-items: center;
@@ -38,5 +38,9 @@ export const ToastContainer = styled.div`
     fill: ${colors.green};
 
     margin-right: 10px;
+  }
+
+  @media screen and (max-width: 539px) {
+    right: 10px;
   }
 `

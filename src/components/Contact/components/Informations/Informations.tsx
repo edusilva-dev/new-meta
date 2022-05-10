@@ -15,17 +15,7 @@ const Informations: FC<IInformationsProps> = ({ className }) => {
     <InformationsContainer className={className}>
       <Title>Se interessou? Entre em contato agora mesmo!</Title>
 
-      <Information
-        phone="(51) 9 9367-9644"
-        email="eduardo.castro@metasegurancaltda.com.br"
-        name="Eduardo Castro"
-      />
-
-      <Information
-        phone="(51) 9 9367-9644"
-        email="claudio.jutai@metasegurancaltda.com.br"
-        name="Cláudio Jutai"
-      />
+      <Information phone="(51) 9 9367-9644" email="contato@metasegurancaltda.com.br" />
     </InformationsContainer>
   )
 }

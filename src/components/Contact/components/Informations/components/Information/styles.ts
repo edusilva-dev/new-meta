@@ -25,24 +25,23 @@ export const Text = styled.span`
   align-items: center;
 
   &:not(:first-child) {
-    margin-top: 5px;
-  }
-
-  &:first-child {
-    font-size: 18px;
-    font-weight: 500;
+    margin-top: 15px;
   }
 
   & svg {
-    width: 15px;
-    height: 15px;
+    fill: ${colors.white};
+
+    width: 22px;
+    height: 22px;
+
+    & path {
+      fill: ${colors.white}!important;
+    }
   }
 
   @media screen and (max-width: 539px) {
     width: 100%;
 
-    &:not(:first-child) {
-      font-size: 10px;
-    }
+    font-size: 14px;
   }
 `

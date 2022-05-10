@@ -44,7 +44,15 @@ export const SloganContainer = styled.div`
   }
 
   @media screen and (max-width: 539px) {
+    height: 300px;
+
     padding: 0 25px;
+
+    background-image: url(statics/bg_2.jpg);
+    background-size: 100% 100%;
+    background-position-y: 24px;
+
+    transform: scale(1.2);
   }
 `
 
@@ -69,7 +77,7 @@ export const Title = styled.h1`
   }
 
   @media screen and (max-width: 539px) {
-    margin-top: 50px;
+    margin-top: 10px;
     font-size: 32px;
   }
 `
@@ -108,7 +116,9 @@ export const SloganText = styled.h2`
   }
 
   @media screen and (max-width: 539px) {
-    font-size: 28px;
+    max-width: 95%;
+
+    font-size: 16px;
 
     margin-top: 10px;
   }

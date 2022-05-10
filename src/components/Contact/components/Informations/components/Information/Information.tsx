@@ -10,14 +10,11 @@ import { Text, TextContainer } from './styles'
 interface IInformationProps {
   phone: string
   email: string
-  name: string
 }
 
-const Information: FC<IInformationProps> = ({ phone, email, name }) => {
+const Information: FC<IInformationProps> = ({ phone, email }) => {
   return (
     <TextContainer>
-      <Text>{name}</Text>
-
       <Text>
         <Email />
         {email}

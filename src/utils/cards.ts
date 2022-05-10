@@ -5,7 +5,7 @@ const cards = [
       <ul>
         <li>Controle de entrada e saída de pessoas e veículos</li>
         <li>Organização ao acesso de pessoas ao local</li>
-        <li>Orentação aos visitantes</li>
+        <li>Orientação aos visitantes</li>
       </ul>
     `,
     icon: 'gate'
@@ -16,7 +16,7 @@ const cards = [
       <ul>
         <li>Limpeza predial diária</li>
         <li>Limpeza predial por escala</li>
-        <li>Limpea domiciliar ocasional</li>
+        <li>Limpeza domiciliar ocasional</li>
       </ul>
     `,
     icon: 'clean'
@@ -37,9 +37,9 @@ const cards = [
     description: `
       <ul>
         <li>Monitoramento de pessoas</li>
-        <li>Controle de conflitor</li>
+        <li>Controle de conflitos</li>
         <li>Segurança reforçada</li>
-        <li>Segurança pessoal para atração principal</li>
+        <li>Segurança pessoal para a atração principal</li>
       </ul>
     `,
     icon: 'event'
